@@ -1,0 +1,101 @@
+.display-div{
+    width: 100%;
+    background-color: whitesmoke;
+    height: 100vh;
+    overflow-y: scroll;
+
+}
+
+.top-div-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.top-div-sub-1{
+    display: flex;   
+}
+
+.top-div-sub-1-h{
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 5px;
+}
+.d{
+    font-weight: 700;
+}
+
+.github-btn{
+    background-color: rgba(7, 98, 236, 0.951);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 10px 7px 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+.git-icon{
+    margin-right: 7px;
+}
+
+.dashbord-card{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.dashboard-h{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px 0px 5px 0px;
+}
+.dashboard-btn{
+    border: none;
+    padding: 7px 10px 7px 10px;
+    border-radius: 3px;
+}
+
+.cl-s-p-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.cl-s-p-card{
+    width: 31%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0px 10px 0px 10px;
+}
+
+
+.cl-s-p-sub{
+
+}
+
+.cl-s-p-h1{
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+.cl-s-p-h2{
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.cl-icon{
+    color: rgb(5, 231, 5);
+}
+.s-icon{
+    color: rgb(0, 38, 164);
+}
+.p-icon{
+    color: rgb(219, 4, 4);
+}
