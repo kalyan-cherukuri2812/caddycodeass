@@ -3,8 +3,12 @@ import "./index.css"
 
 import { BsGithub,BsPeopleFill,BsFillBarChartFill } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { MdRefresh } from "react-icons/md";
+
+
 
 import Tabel from "../Tabel";
+import Charts from "../Chart"
 
 
 const Display=()=>(
@@ -48,6 +52,16 @@ const Display=()=>(
 <BsFillBarChartFill   className="p-icon"/>
         </div>
        </div>
+
+       <div className="tabel-clint-div per-c">
+        <div className="tabrl-clint-card">
+            <BsPeopleFill className="pep-icon"/>
+            <h1 className="tabel-clint-h">Clients</h1>
+        </div>
+
+        <MdRefresh/>
+        </div>
+       <Charts/>
        <Tabel/>
     </div>
 )

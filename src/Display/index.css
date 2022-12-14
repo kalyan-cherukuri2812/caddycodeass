@@ -76,9 +76,7 @@
 }
 
 
-.cl-s-p-sub{
 
-}
 
 .cl-s-p-h1{
     font-size: 10px;
@@ -98,4 +96,10 @@
 }
 .p-icon{
     color: rgb(219, 4, 4);
+}
+
+
+.per-c{
+    background-color: white;
+    margin: 5px 10px 0px 10px;
 }

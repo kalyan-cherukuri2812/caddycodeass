@@ -13,16 +13,19 @@ export default class Tabel extends Component {
     state={data:[],page:[0,10,1]}
 
     componentDidMount=()=>{
+       this.getData()
+    }
+    
+    getData=()=>{
         let data=[]
         for (let i=0;i<30;i++){
             const id=faker.datatype.uuid();
             const name=faker.name.fullName();
-           const company=faker.company.name();
-           const city=faker.address.city();
-           const progress=faker.datatype.number({min: 5, max: 100});
-           const date=String(faker.date.past());
-
-        data=[...data,{id,name,company,city,progress,date}]
+            const company=faker.company.name();
+            const city=faker.address.city();
+            const progress=faker.datatype.number({min: 5, max: 100});
+            const date=String(faker.date.past());
+            data=[...data,{id,name,company,city,progress,date}]
         }
         this.setState({data:data})
     }
@@ -49,11 +52,15 @@ export default class Tabel extends Component {
 
     }
 
+    refresh=()=>{
+        this.getData()
+    }
+
     
 
   render() {
     const {data,page}=this.state
-   console.log(page)
+  
    const bg=["#ff410f","#cd2626","#003153","#b7410e","#9fb6cd","#6a329f"]
   
     
@@ -76,7 +83,7 @@ export default class Tabel extends Component {
             <BsPeopleFill className="pep-icon"/>
             <h1 className="tabel-clint-h">Clients</h1>
         </div>
-        <MdRefresh/>
+        <MdRefresh onClick={this.refresh} />
         </div>
 
        
@@ -91,8 +98,8 @@ export default class Tabel extends Component {
            <h1 className="created-h">Created</h1>
         </li>
         {data.slice(page[0],page[1]).map(each=>(
-            <li  className="tadel-headings-div">
-                <h1 className="name-data"><h1 className="spam-name-icon" style={{backgroundColor:bg[Math.ceil(Math.random()*bg.length)]}}>{each.name.slice(0,1)}</h1>{each.name}</h1>
+            <li key={each.id}  className="tadel-headings-div">
+                <h1 className="name-data"><p className="spam-name-icon" style={{backgroundColor:bg[Math.ceil(Math.random()*bg.length)]}}>{each.name.slice(0,1)}</p>{each.name}</h1>
                 <h1 className="compant-data">{each.company}</h1>
                 <h1 className="city-data">{each.city}</h1>
                 <h1 className="progress-data"><ProgressBar completed={each.progress} customLabel=" " height="10px" width="90%" bgColor="rgba(29, 33, 253, 0.734)" /></h1>
